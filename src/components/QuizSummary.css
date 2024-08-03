@@ -1,0 +1,248 @@
+.quiz-summary-meditation {
+  color: rgb(255, 136, 0);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  font-weight: 300;
+}
+
+.quiz-summary-fitness {
+  color: rgb(0, 255, 255);
+  text-shadow: 0px 0px 10px rgb(95, 95, 95);
+  font-weight: 300;
+}
+
+.questions-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.question-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  justify-content: center;
+  height: 65px;
+}
+
+.answer-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.icon svg {
+  width: 100%;
+  color: #ffac3f;
+  height: 100%;
+}
+
+.quiz-summary-fitness-question-text h3 {
+  border-top: 1px solid rgb(0, 255, 255);
+
+  text-shadow: 0px 0px 5px aqua !important;
+  color: #00d9ff !important;
+  text-shadow: 0px 0px 5px black;
+}
+.quiz-summary-meditation-question-text h3 {
+  color: rgb(255, 221, 136);
+
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  border-top: 1px solid rgb(255, 136, 0);
+}
+
+.quiz-summary-meditation-question-text h3,
+.quiz-summary-fitness-question-text h3 {
+  font-weight: 300;
+  padding-top: 5px;
+  width: 100%;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.quiz-summary-meditation-question-text .answer-text,
+.quiz-summary-fitness-question-text .answer-text {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  font-weight: 300;
+  margin-right: 15px;
+}
+
+.quiz-summary-meditation-question-text .correct-answer,
+.quiz-summary-fitness-question-text .correct-answer {
+  color: rgb(0, 255, 213);
+  text-shadow: 0px 0px 5px black;
+  font-weight: 300;
+}
+
+.quiz-summary-meditation-question-text .skipped,
+.quiz-summary-fitness-question-text .skipped {
+  color: rgb(255, 217, 0);
+  text-shadow: 0px 0px 5px black;
+  font-weight: 300;
+}
+
+.quiz-summary-meditation-question-text .correct-user-answer,
+.quiz-summary-fitness-question-text .correct-user-answer {
+  color: rgb(0, 255, 213);
+  text-shadow: 0px 0px 5px black;
+
+  font-weight: 300;
+}
+.quiz-summary-meditation-question-text .wrong-user-answer,
+.quiz-summary-fitness-question-text .wrong-user-answer {
+  color: rgb(255, 201, 201);
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  font-weight: 300;
+}
+
+.achievement-level {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.achievement-level h3 {
+  color: white;
+  font-weight: 500;
+  color: rgb(255, 250, 241);
+  font-size: 2rem;
+}
+.achievement-level p {
+  color: white;
+  padding: 5px 0px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-top: 2px solid rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+.reset-bttn {
+  width: 43px;
+  height: 43px;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: all ease-in-out 0.2s;
+}
+
+.reset-bttn img {
+  width: 100%;
+  height: 100%;
+  animation: showUp 1s ease-in-out;
+}
+
+.reset-bttn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 680px) {
+  .question .quiz-summary-fitness,
+  .question .quiz-summary-meditation {
+    font-size: 1.6rem;
+  }
+  .question .achievement-level h3 {
+    font-size: 1.5rem;
+  }
+  .question .achievement-level p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .question-item h3 {
+    font-size: 1.1rem;
+  }
+  .question .quiz-summary-fitness,
+  .question .quiz-summary-meditation {
+    font-size: 1.3rem;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .answer-container {
+    font-size: 0.88rem;
+  }
+  .quiz .quiz-set-bttn {
+    width: 200px !important;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .question-item h3 {
+    font-size: 0.9rem;
+  }
+  .question .quiz-summary-fitness,
+  .question .quiz-summary-meditation {
+    font-size: 1.1rem;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .answer-container {
+    font-size: 0.7rem;
+  }
+  .question .achievement-level h3 {
+    font-size: 1.2rem;
+  }
+  .question .achievement-level p {
+    font-size: 0.7rem;
+  }
+  .question-item {
+    height: 50px;
+  }
+  .quiz-expand-end {
+    height: 700px;
+    padding: 0px;
+  }
+  .reset-bttn {
+    top: 20px;
+    width: 30px;
+    height: 30px;
+  }
+  .timer-start-quiz {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .question .quiz-summary-fitness,
+  .question .quiz-summary-meditation {
+    font-size: 1rem;
+  }
+  .question .achievement-level h3 {
+    font-size: 1.1rem;
+  }
+  .question-item h3 {
+    font-size: 0.85rem;
+  }
+}
