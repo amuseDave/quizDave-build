@@ -7,11 +7,11 @@ export default function QuizState({ answers, currentQuestion, submitAnswer }) {
   const [answer, setAnswer] = useState("");
   const progressTime =
     answerState === true
-      ? 10000
+      ? 13500
       : answerState === undefined
-      ? 800
+      ? 1000
       : answerState === "correct" || answerState === "wrong"
-      ? 1500
+      ? 2000
       : answerState === "skipped"
       ? 1500
       : null;
